@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f2937;
+    padding: 1rem 10%;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 10.4s;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #1f2937;
+    padding: 4rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: #9ca3af;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(2.05);
+}
+
+/* Products Section */
+.products-section {
+    padding: 4rem 10%;
+    text-align: center;
+    background-color: #f9fafb;
+}
+
+.products-section h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #1f2937;
+}
+
+.products-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.product-card {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+}
+
+.product-card p {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Rest of your existing CSS remains the same */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1f2937;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    #nav-toggle:checked ~ nav {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 5%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        height: 300px;
+        width: 100%;
+    }
+
+    .products-cards {
+        flex-direction: column;
+    }
+
+    .product-card {
+        margin-bottom: 1rem;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 70px;
+        height: 40px;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+}
+.contact-info {
+    background-color: #e5e7eb;
+    padding: 2rem 10%;
+    text-align: center;
+  }
+
+  .contact-info p {
+    margin: 0.5rem 0;
+    color: #1f2937;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 4rem 10%;
+  }
+
+  .cta-container {
+    background-color: #3b82f6;
+    color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Button Styles */
+  .button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .cta-container .button {
+    background-color: white;
+    color: #3b82f6;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #1f2937;
+      flex-direction: column;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #nav-toggle:checked ~ nav {
+      display: flex;
+    }
+
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .products-cards {
+      flex-direction: column;
+    }
+
+    .cta-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+
